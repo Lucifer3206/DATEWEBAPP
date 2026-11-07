@@ -1,0 +1,238 @@
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+    width: 100%;
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 80px 7%;
+
+    background-color: #000;
+    color: #fff;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   HERO CONTENT
+================================= */
+
+.hero-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #999;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   MAIN HEADING
+================================= */
+
+.hero-content h1 {
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 800;
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    color: #fff;
+
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #999;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.hero-description {
+    max-width: 490px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #b5b5b5;
+
+    margin-bottom: 35px;
+}
+
+
+/* =================================
+   HERO BUTTONS
+================================= */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 25px;
+
+    background-color: #fff;
+    color: #000;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #dcdcdc;
+    transform: translateY(-3px);
+}
+
+
+.text-btn {
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #777;
+    padding-bottom: 5px;
+
+    transition: color 0.3s ease;
+}
+
+.text-btn:hover {
+    color: #aaa;
+}
+
+
+/* =================================
+   LOGIN TEXT
+================================= */
+
+.login-text {
+    font-size: 13px;
+    color: #999;
+}
+
+.login-text a {
+    color: #fff;
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1024px) {
+
+    .hero {
+        gap: 25px;
+        padding: 70px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 65px 6% 50px;
+
+        gap: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(40px, 10vw, 55px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 39px;
+    }
+
+    .primary-btn {
+        padding: 14px 20px;
+    }
+
+}

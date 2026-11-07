@@ -1,0 +1,55 @@
+/* ================= HOW IT WORKS ================= */
+
+.steps-section {
+
+    padding: 100px 7%;
+
+}
+
+.steps-grid {
+
+    max-width: var(--container);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+}
+
+.step {
+
+    border-top: 1px solid var(--black);
+
+    padding-top: 25px;
+
+}
+
+.step span {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: var(--gray);
+
+}
+
+.step h3 {
+
+    font-size: 24px;
+
+    margin: 20px 0 12px;
+
+}
+
+.step p {
+
+    font-size: 14px;
+
+    color: var(--gray);
+
+}

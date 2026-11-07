@@ -1,0 +1,118 @@
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    height: 85px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+
+    background: white;
+
+}
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+}
+
+.logo span {
+    color: #888888;
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.nav-links a:hover {
+    color: #888888;
+}
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+.login-btn {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+/* JOIN US BUTTON */
+
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 30px;
+
+    background-color: #111;
+    color: #fff !important;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    background-color: #333;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+.navbar {
+    background-color: #fff;
+}
+
+.navbar a,
+.navbar .logo {
+    color: #111;
+}

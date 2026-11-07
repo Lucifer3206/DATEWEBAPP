@@ -1,0 +1,217 @@
+/* =================================
+   COMMUNITY SECTION
+================================= */
+
+.community-section {
+    width: 100%;
+    padding: 100px 7%;
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.community-section .section-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.community-section .eyebrow {
+    display: block;
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.community-section .section-heading h2 {
+    color: #111;
+    font-size: clamp(36px, 5vw, 55px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+
+/* =================================
+   COMMUNITY GRID
+================================= */
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =================================
+   COMMUNITY CARDS
+================================= */
+
+.community-card {
+    min-height: 210px;
+    padding: 40px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 13px;
+
+    color: #111;
+
+    transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =================================
+   CARD HEADING
+================================= */
+
+.community-card h3 {
+    color: #111;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 15px;
+
+    transition: color 0.35s ease;
+}
+
+
+/* =================================
+   CARD DESCRIPTION
+================================= */
+
+.community-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 25px;
+
+    transition: color 0.35s ease;
+}
+
+
+/* =================================
+   EXPLORE TEXT
+================================= */
+
+.community-card span {
+    color: #111;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: color 0.35s ease;
+}
+
+
+/* =================================
+   HOVER EFFECT - ALL CARDS
+================================= */
+
+.community-card:hover {
+    background-color: #111;
+    border-color: #111;
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.community-card:hover h3,
+.community-card:hover p,
+.community-card:hover span {
+    color: #fff;
+}
+
+
+/* =================================
+   TABLET RESPONSIVENESS
+================================= */
+
+@media (max-width: 768px) {
+
+    .community-section {
+        padding: 75px 5%;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-card {
+        min-height: 190px;
+        padding: 30px;
+    }
+}
+
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 480px) {
+
+    .community-section {
+        padding: 60px 20px;
+    }
+
+    .community-section .section-heading h2 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .community-card h3 {
+        font-size: 24px;
+    }
+}
+/* All cards default state */
+
+.community-card {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+
+    transition: all 0.35s ease;
+}
+
+.community-card h3,
+.community-card p,
+.community-card span {
+    color: #111;
+    transition: color 0.35s ease;
+}
+
+
+/* Only on hover */
+
+.community-card:hover {
+    background-color: #111;
+    border-color: #111;
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.community-card:hover h3,
+.community-card:hover p,
+.community-card:hover span {
+    color: #fff;
+}

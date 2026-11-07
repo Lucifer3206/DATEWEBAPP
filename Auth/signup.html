@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Connect.</title>
+
+    <link rel="stylesheet" href="./css/auth-global.css">
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <div class="signup-wrapper">
+
+            <!-- LEFT BRANDING SECTION -->
+
+            <section class="signup-brand">
+
+                <a href="../LandingPage/index.html" class="brand-logo">
+                    connect<span>.</span>
+                </a>
+
+                <div class="brand-content">
+
+                    <h1>
+                        Don't just meet people.
+                        <span>Get to know them.</span>
+                    </h1>
+
+                    <p>
+                        Join communities, start conversations
+                        and build meaningful connections.
+                    </p>
+
+                </div>
+
+                <div class="brand-footer">
+                    Start with a conversation.
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIGNUP SECTION -->
+
+            <section class="signup-form-section">
+
+                <div class="signup-form-container">
+
+                    <div class="form-header">
+
+                        <h2 class="auth-heading">
+                            Create your account
+                        </h2>
+
+                        <p class="auth-description">
+                            Join Connect. and start meeting people
+                            through communities.
+                        </p>
+
+                    </div>
+
+
+                    <!-- SIGNUP FORM -->
+
+                    <form id="signupForm" novalidate>
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- USERNAME -->
+
+                        <div class="form-group">
+
+                            <label for="username">
+                                Username
+                            </label>
+
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="Choose a username"
+                                autocomplete="username"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE NUMBER -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter 10-digit mobile number"
+                                inputmode="numeric"
+                                autocomplete="tel"
+                                maxlength="10"
+                                required
+                            >
+
+                            <small>
+                                We'll use this number for OTP verification.
+                            </small>
+
+                        </div>
+
+
+                        <!-- SEND OTP -->
+
+                        <div class="form-group">
+
+                            <button
+                                type="button"
+                                id="sendOtpBtn"
+                                class="auth-button"
+                            >
+                                Send OTP
+                            </button>
+
+                        </div>
+
+
+                        <!-- OTP VERIFICATION -->
+
+                        <div id="otpSection" hidden>
+
+                            <div class="form-group">
+
+                                <label for="otp">
+                                    Enter OTP
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="otp"
+                                    name="otp"
+                                    placeholder="Enter 6-digit OTP"
+                                    inputmode="numeric"
+                                    autocomplete="one-time-code"
+                                    maxlength="6"
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <button
+                                    type="button"
+                                    id="verifyOtpBtn"
+                                    class="auth-button"
+                                >
+                                    Verify OTP
+                                </button>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <button
+                                    type="button"
+                                    id="resendOtpBtn"
+                                    class="auth-button"
+                                    disabled
+                                >
+                                    Resend OTP
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DATE OF BIRTH -->
+
+                        <div class="form-group">
+
+                            <label for="dob">
+                                Date of Birth
+                            </label>
+
+                            <input
+                                type="date"
+                                id="dob"
+                                name="dob"
+                                required
+                            >
+
+                            <small>
+                                You must be 18 or older to join Connect.
+                            </small>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+
+                        <div class="terms-group">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                            >
+
+                            <label for="terms">
+                                I agree to the Terms and Conditions
+                                and Privacy Policy.
+                            </label>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <p
+                            id="signupMessage"
+                            class="form-message"
+                            aria-live="polite"
+                        ></p>
+
+
+                        <!-- CREATE ACCOUNT -->
+
+                        <button
+                            type="submit"
+                            id="signupBtn"
+                            class="auth-button"
+                            disabled
+                        >
+                            Create Account
+                        </button>
+
+                    </form>
+
+
+                    <!-- LOGIN REDIRECT -->
+
+                    <div class="login-redirect">
+
+                        <p>
+                            Already have an account?
+
+                            <a href="./login.html">
+                                Log in
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./js/signup.js"></script>
+
+</body>
+
+</html>

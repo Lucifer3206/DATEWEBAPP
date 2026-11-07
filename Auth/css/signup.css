@@ -1,0 +1,380 @@
+/* ==========================================
+   CONNECT. — SIGNUP PAGE
+========================================== */
+
+
+/* 1. MAIN WRAPPER */
+
+.signup-wrapper {
+    width: 100%;
+    max-width: 1150px;
+    min-height: 750px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    background-color: #ffffff;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 2. LEFT BRANDING SECTION */
+
+.signup-brand {
+    background-color: #000000;
+    color: #ffffff;
+
+    padding: 55px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.brand-logo span {
+    color: #999999;
+}
+
+.brand-content {
+    max-width: 420px;
+}
+
+.brand-content h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+
+    margin-bottom: 22px;
+}
+
+.brand-content h1 span {
+    color: #999999;
+}
+
+.brand-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.brand-footer {
+    font-size: 13px;
+    color: #999999;
+    letter-spacing: 0.5px;
+}
+
+
+/* 3. RIGHT FORM SECTION */
+
+.signup-form-section {
+    padding: 50px 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+}
+
+.signup-form-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+
+/* 4. FORM HEADER */
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header .auth-heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form-header .auth-description {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* 5. FORM INPUTS */
+
+.signup-form-container .form-group {
+    margin-bottom: 17px;
+}
+
+.signup-form-container .form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.signup-form-container .form-group input:not([type="checkbox"]) {
+    width: 100%;
+    height: 46px;
+    font-size: 13px;
+}
+
+.signup-form-container .form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+.signup-form-container .form-group small {
+    font-size: 11px;
+    color: #777777;
+    margin-top: 2px;
+}
+
+
+/* 6. PHONE INPUT */
+
+#phone {
+    letter-spacing: 0.5px;
+}
+
+
+/* 7. OTP SECTION */
+
+#otpSection {
+    margin-top: 12px;
+}
+
+#otpSection[hidden] {
+    display: none;
+}
+
+#otp {
+    letter-spacing: 5px;
+    font-size: 17px !important;
+    font-weight: 600;
+}
+
+
+/* OTP BUTTONS */
+
+#sendOtpBtn,
+#verifyOtpBtn,
+#resendOtpBtn {
+    width: 100%;
+    min-height: 44px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    border: 1px solid #cccccc;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+}
+
+#sendOtpBtn:hover:not(:disabled),
+#verifyOtpBtn:hover:not(:disabled),
+#resendOtpBtn:hover:not(:disabled) {
+    background-color: #eeeeee;
+}
+
+#sendOtpBtn:disabled,
+#verifyOtpBtn:disabled,
+#resendOtpBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* 8. TERMS AND CONDITIONS */
+
+.terms-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin: 22px 0;
+}
+
+.terms-group input,
+#terms {
+    width: 15px;
+    height: 15px;
+
+    margin-top: 3px;
+
+    accent-color: #000000;
+    flex-shrink: 0;
+}
+
+.terms-group label {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.terms-group a {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+/* 9. FORM MESSAGES */
+
+#signupMessage {
+    font-size: 13px;
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+    min-height: 18px;
+}
+
+#signupMessage.error {
+    color: #d00000;
+}
+
+#signupMessage.success {
+    color: #16803c;
+}
+
+#signupMessage.info {
+    color: #555555;
+}
+
+
+/* 10. CREATE ACCOUNT BUTTON */
+
+.signup-form-container .auth-button {
+    min-height: 48px;
+    font-size: 14px;
+}
+
+.signup-form-container .auth-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* 11. LOGIN REDIRECT */
+
+.login-redirect {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-redirect p {
+    font-size: 13px;
+    color: #777777;
+}
+
+.login-redirect a {
+    color: #000000;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}
+
+
+/* 12. TABLET RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .signup-wrapper {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .signup-brand {
+        padding: 40px 30px;
+    }
+
+    .brand-content h1 {
+        font-size: 38px;
+    }
+
+    .signup-form-section {
+        padding: 40px 30px;
+    }
+
+}
+
+
+/* 13. MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .auth-container {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .signup-wrapper {
+        grid-template-columns: 1fr;
+        border-radius: 12px;
+    }
+
+    .signup-brand {
+        min-height: 230px;
+        padding: 25px;
+    }
+
+    .brand-logo {
+        font-size: 27px;
+    }
+
+    .brand-content {
+        margin-top: 35px;
+    }
+
+    .brand-content h1 {
+        font-size: 30px;
+    }
+
+    .brand-content p {
+        font-size: 13px;
+    }
+
+    .brand-footer {
+        display: none;
+    }
+
+    .signup-form-section {
+        padding: 35px 22px;
+    }
+
+    .form-header .auth-heading {
+        font-size: 26px;
+    }
+
+}
+
+
+/* 14. SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .signup-form-section {
+        padding: 28px 16px;
+    }
+
+    .brand-content h1 {
+        font-size: 27px;
+    }
+
+}

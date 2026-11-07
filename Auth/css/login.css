@@ -1,0 +1,340 @@
+/* ==========================================
+   CONNECT. — LOGIN PAGE
+========================================== */
+
+
+/* 1. MAIN WRAPPER */
+
+.login-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    background-color: #ffffff;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 2. LEFT BRANDING SECTION */
+
+.login-brand {
+    background-color: #000000;
+    color: #ffffff;
+
+    padding: 55px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.brand-logo span {
+    color: #999999;
+}
+
+.brand-content {
+    max-width: 420px;
+}
+
+.brand-content h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+
+    margin-bottom: 22px;
+}
+
+.brand-content h1 span {
+    color: #999999;
+}
+
+.brand-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.brand-footer {
+    font-size: 13px;
+    color: #999999;
+    letter-spacing: 0.5px;
+}
+
+
+/* 3. RIGHT FORM SECTION */
+
+.login-form-section {
+    padding: 50px 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* 4. FORM HEADER */
+
+.form-header {
+    margin-bottom: 35px;
+}
+
+.form-header .auth-heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form-header .auth-description {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* 5. FORM INPUTS */
+
+.login-form-container .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form-container .form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.login-form-container .form-group input:not([type="checkbox"]) {
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+}
+
+.login-form-container .form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+
+/* 6. PHONE INPUT */
+
+#loginPhone {
+    letter-spacing: 0.5px;
+}
+
+
+/* 7. OTP SECTION */
+
+#loginOtpSection {
+    margin-top: 18px;
+}
+
+#loginOtpSection[hidden] {
+    display: none;
+}
+
+#loginOtp {
+    letter-spacing: 5px;
+    font-size: 18px !important;
+    font-weight: 600;
+}
+
+
+/* 8. OTP BUTTONS */
+
+#loginSendOtpBtn,
+#loginVerifyOtpBtn,
+#loginResendOtpBtn {
+    width: 100%;
+    min-height: 45px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    border: 1px solid #cccccc;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+}
+
+#loginSendOtpBtn:hover:not(:disabled),
+#loginVerifyOtpBtn:hover:not(:disabled),
+#loginResendOtpBtn:hover:not(:disabled) {
+    background-color: #eeeeee;
+}
+
+#loginSendOtpBtn:disabled,
+#loginVerifyOtpBtn:disabled,
+#loginResendOtpBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* 9. FORM MESSAGES */
+
+#loginMessage {
+    font-size: 13px;
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+    min-height: 18px;
+}
+
+#loginMessage.error {
+    color: #d00000;
+}
+
+#loginMessage.success {
+    color: #16803c;
+}
+
+#loginMessage.info {
+    color: #555555;
+}
+
+
+/* 10. LOGIN BUTTON */
+
+.login-form-container .auth-button {
+    min-height: 48px;
+    font-size: 14px;
+}
+
+.login-form-container .auth-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* 11. SIGNUP REDIRECT */
+
+.signup-redirect {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.signup-redirect p {
+    font-size: 13px;
+    color: #777777;
+}
+
+.signup-redirect a {
+    color: #000000;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.signup-redirect a:hover {
+    text-decoration: underline;
+}
+
+
+/* 12. TABLET RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .login-wrapper {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .login-brand {
+        padding: 40px 30px;
+    }
+
+    .brand-content h1 {
+        font-size: 38px;
+    }
+
+    .login-form-section {
+        padding: 40px 30px;
+    }
+
+}
+
+
+/* 13. MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .auth-container {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .login-wrapper {
+        grid-template-columns: 1fr;
+        border-radius: 12px;
+    }
+
+    .login-brand {
+        min-height: 230px;
+        padding: 25px;
+    }
+
+    .brand-logo {
+        font-size: 27px;
+    }
+
+    .brand-content {
+        margin-top: 35px;
+    }
+
+    .brand-content h1 {
+        font-size: 30px;
+    }
+
+    .brand-content p {
+        font-size: 13px;
+    }
+
+    .brand-footer {
+        display: none;
+    }
+
+    .login-form-section {
+        padding: 40px 22px;
+    }
+
+    .form-header .auth-heading {
+        font-size: 26px;
+    }
+
+}
+
+
+/* 14. SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .login-form-section {
+        padding: 30px 16px;
+    }
+
+    .brand-content h1 {
+        font-size: 27px;
+    }
+
+}

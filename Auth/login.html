@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Connect.</title>
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="./css/auth-global.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <div class="login-wrapper">
+
+
+            <!-- LEFT BRANDING SECTION -->
+
+            <section class="login-brand">
+
+                <a href="../LandingPage/index.html" class="brand-logo">
+                    connect<span>.</span>
+                </a>
+
+                <div class="brand-content">
+
+                    <h1>
+                        Every connection
+                        <span>starts somewhere.</span>
+                    </h1>
+
+                    <p>
+                        Come back to your communities,
+                        continue conversations and discover
+                        meaningful connections.
+                    </p>
+
+                </div>
+
+                <div class="brand-footer">
+                    Don't start with a match. Start with a conversation.
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT LOGIN SECTION -->
+
+            <section class="login-form-section">
+
+                <div class="login-form-container">
+
+
+                    <!-- FORM HEADER -->
+
+                    <div class="form-header">
+
+                        <h2 class="auth-heading">
+                            Welcome back
+                        </h2>
+
+                        <p class="auth-description">
+                            Log in to continue your journey with Connect.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+
+                    <form id="loginForm" novalidate>
+
+
+                        <!-- PHONE NUMBER -->
+
+                        <div class="form-group">
+
+                            <label for="loginPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="loginPhone"
+                                name="phone"
+                                placeholder="Enter your 10-digit mobile number"
+                                inputmode="numeric"
+                                autocomplete="tel"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- SEND OTP -->
+
+                        <div class="form-group">
+
+                            <button
+                                type="button"
+                                id="loginSendOtpBtn"
+                                class="auth-button"
+                            >
+                                Send OTP
+                            </button>
+
+                        </div>
+
+
+                        <!-- OTP SECTION -->
+
+                        <div id="loginOtpSection" hidden>
+
+                            <div class="form-group">
+
+                                <label for="loginOtp">
+                                    Enter OTP
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="loginOtp"
+                                    name="otp"
+                                    placeholder="Enter 6-digit OTP"
+                                    inputmode="numeric"
+                                    autocomplete="one-time-code"
+                                    maxlength="6"
+                                >
+
+                            </div>
+
+
+                            <!-- VERIFY OTP -->
+
+                            <div class="form-group">
+
+                                <button
+                                    type="button"
+                                    id="loginVerifyOtpBtn"
+                                    class="auth-button"
+                                >
+                                    Verify OTP
+                                </button>
+
+                            </div>
+
+
+                            <!-- RESEND OTP -->
+
+                            <div class="form-group">
+
+                                <button
+                                    type="button"
+                                    id="loginResendOtpBtn"
+                                    class="auth-button"
+                                    disabled
+                                >
+                                    Resend OTP
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <p
+                            id="loginMessage"
+                            class="form-message"
+                            aria-live="polite"
+                        ></p>
+
+
+                        <!-- LOGIN BUTTON -->
+
+                        <button
+                            type="submit"
+                            id="loginBtn"
+                            class="auth-button"
+                            disabled
+                        >
+                            Log In
+                        </button>
+
+
+                    </form>
+
+
+                    <!-- SIGNUP REDIRECT -->
+
+                    <div class="signup-redirect">
+
+                        <p>
+                            Don't have an account?
+
+                            <a href="./signup.html">
+                                Create account
+                            </a>
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./js/login.js"></script>
+
+</body>
+
+</html>
