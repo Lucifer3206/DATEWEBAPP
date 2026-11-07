@@ -263,21 +263,19 @@ function displayPhotoPreviews(input, previewContainer) {
 
         const files = Array.from(input.files);
 
-        // Validate all selected files before displaying previews
+        // Validate selected files
         const invalidFile = files.find(file =>
             !file.type.startsWith("image/") ||
             file.size > 5 * 1024 * 1024
         );
 
         if (invalidFile) {
-            const message = !invalidFile.type.startsWith("image/")
-                ? "Please select image files only."
-                : "Each photo must be smaller than 5 MB.";
+            previewContainer.textContent =
+                !invalidFile.type.startsWith("image/")
+                    ? "Please select image files only."
+                    : "Each photo must be smaller than 5 MB.";
 
-            previewContainer.textContent = message;
             previewContainer.classList.add("photo-error");
-
-            // Prevent invalid files from being submitted
             input.value = "";
             return;
         }
@@ -286,7 +284,10 @@ function displayPhotoPreviews(input, previewContainer) {
 
         const validURLs = [];
 
-        files.forEach(file => {
+        files.forEach((file, index) => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "photo-preview-item";
+
             const image = document.createElement("img");
             const imageURL = URL.createObjectURL(file);
 
@@ -294,13 +295,31 @@ function displayPhotoPreviews(input, previewContainer) {
 
             image.src = imageURL;
             image.alt = "Selected profile photo";
-            image.style.width = "110px";
-            image.style.height = "110px";
-            image.style.objectFit = "cover";
-            image.style.borderRadius = "8px";
-            image.style.margin = "8px 8px 0 0";
 
-            previewContainer.appendChild(image);
+            const removeButton = document.createElement("button");
+            removeButton.type = "button";
+            removeButton.textContent = "×";
+            removeButton.className = "remove-photo-btn";
+            removeButton.setAttribute("aria-label", "Remove photo");
+
+            removeButton.addEventListener("click", function () {
+                const updatedFiles = Array.from(input.files);
+                updatedFiles.splice(index, 1);
+
+                const dataTransfer = new DataTransfer();
+
+                updatedFiles.forEach(file => {
+                    dataTransfer.items.add(file);
+                });
+
+                input.files = dataTransfer.files;
+
+                input.dispatchEvent(new Event("change"));
+            });
+
+            wrapper.appendChild(image);
+            wrapper.appendChild(removeButton);
+            previewContainer.appendChild(wrapper);
         });
 
         previewContainer.dataset.objectUrls = JSON.stringify(validURLs);
