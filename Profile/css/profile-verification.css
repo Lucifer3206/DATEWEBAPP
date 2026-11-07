@@ -1,0 +1,25 @@
+/* Face Verification Section */
+
+.form-section:nth-of-type(7) .form-group {
+    margin-bottom: 22px;
+}
+
+.form-section:nth-of-type(7) input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #000;
+}
+
+.form-section:nth-of-type(7) label {
+    cursor: pointer;
+}
+
+#startVerificationBtn {
+    margin-top: 12px;
+}
+
+#verificationStatus {
+    margin-top: 12px;
+    font-size: 14px;
+}

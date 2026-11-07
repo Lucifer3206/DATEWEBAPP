@@ -1,0 +1,21 @@
+/* Interests & Hobbies Section */
+
+.form-section:nth-of-type(3) .form-group {
+    margin-bottom: 20px;
+}
+
+.form-section:nth-of-type(3) input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #000;
+}
+
+.form-section:nth-of-type(3) label {
+    cursor: pointer;
+}
+
+.form-section:nth-of-type(3) input[type="text"] {
+    min-height: 45px;
+    border-radius: 5px;
+}

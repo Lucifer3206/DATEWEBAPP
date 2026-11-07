@@ -1,0 +1,19 @@
+/* Basic Information Section */
+
+.form-section:first-of-type .form-group {
+    margin-bottom: 25px;
+}
+
+.form-section:first-of-type input,
+.form-section:first-of-type select {
+    border-radius: 5px;
+    min-height: 45px;
+}
+
+.form-section:first-of-type input::placeholder {
+    color: #999;
+}
+
+.form-section:first-of-type select {
+    cursor: pointer;
+}

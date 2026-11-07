@@ -1,0 +1,15 @@
+/* Dating Preferences Section */
+
+.form-section:nth-of-type(5) select,
+.form-section:nth-of-type(5) input[type="number"] {
+    min-height: 45px;
+    border-radius: 5px;
+}
+
+.form-section:nth-of-type(5) select {
+    cursor: pointer;
+}
+
+.form-section:nth-of-type(5) .form-group {
+    margin-bottom: 22px;
+}

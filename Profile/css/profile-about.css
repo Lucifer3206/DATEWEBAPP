@@ -1,0 +1,16 @@
+/* About Yourself Section */
+
+.form-section:nth-of-type(2) textarea {
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.form-section:nth-of-type(2) input {
+    border-radius: 5px;
+    min-height: 45px;
+}
+
+.form-section:nth-of-type(2) textarea::placeholder,
+.form-section:nth-of-type(2) input::placeholder {
+    color: #999;
+}

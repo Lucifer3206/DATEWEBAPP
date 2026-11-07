@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Your Profile</title>
+
+    <link rel="stylesheet" href="css/profile-global.css">
+</head>
+
+<body>
+
+    <main class="profile-container">
+
+        <!-- LEFT BLACK PANEL -->
+        <aside class="profile-sidebar">
+
+            <div class="brand">
+                <span class="brand-mark">C.</span>
+                <span class="brand-name">COMMUNITY</span>
+            </div>
+
+            <div class="sidebar-content">
+
+                <span class="sidebar-label">YOUR JOURNEY STARTS HERE</span>
+
+                <h1>
+                    Don't start with a match.
+                    <span>Start with a conversation.</span>
+                </h1>
+
+                <p>
+                    Create your profile, discover your people
+                    and find communities where you belong.
+                </p>
+
+            </div>
+
+            <div class="sidebar-footer">
+                <span>01 — 07</span>
+                <span>GETTING TO KNOW YOU</span>
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT FORM PANEL -->
+        <section class="profile-main">
+
+            <header class="profile-header">
+
+                <div>
+                    <span class="section-label">PROFILE SETUP</span>
+                    <h2>Let's get to know you.</h2>
+                    <p>A few simple steps to help people discover you.</p>
+                </div>
+
+            </header>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-area">
+    <div class="progress-info">
+        <span id="stepLabel">Step 1 of 7</span>
+        <span id="progressPercent">14%</span>
+    </div>
+
+    <div class="progress-track">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="step-indicators" aria-label="Profile setup steps">
+        <div class="step-indicator active" data-step="0">
+            <span class="step-dot">01</span>
+            <span class="step-name">Basics</span>
+        </div>
+
+        <div class="step-indicator" data-step="1">
+            <span class="step-dot">02</span>
+            <span class="step-name">People</span>
+        </div>
+
+        <div class="step-indicator" data-step="2">
+            <span class="step-dot">03</span>
+            <span class="step-name">Intent</span>
+        </div>
+
+        <div class="step-indicator" data-step="3">
+            <span class="step-dot">04</span>
+            <span class="step-name">Interests</span>
+        </div>
+
+        <div class="step-indicator" data-step="4">
+            <span class="step-dot">05</span>
+            <span class="step-name">About</span>
+        </div>
+
+        <div class="step-indicator" data-step="5">
+            <span class="step-dot">06</span>
+            <span class="step-name">Photos</span>
+        </div>
+
+        <div class="step-indicator" data-step="6">
+            <span class="step-dot">07</span>
+            <span class="step-name">Review</span>
+        </div>
+    </div>
+</div>
+
+
+            <form id="profileForm">
+
+                <!-- STEP 1: BASIC INFORMATION -->
+                <section class="form-step active">
+
+                    <div class="step-heading">
+                        <span class="step-number">01</span>
+                        <h2>First, the basics.</h2>
+                        <p>Let's start with some basic information about you.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName"
+                            placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">I identify as</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select your gender</option>
+                            <option value="woman">Woman</option>
+                            <option value="man">Man</option>
+                            <option value="non-binary">Non-binary</option>
+                            <option value="self-describe">I describe myself differently</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Your City</label>
+                        <input type="text" id="city" name="city"
+                            placeholder="Enter your city" required>
+                    </div>
+
+                </section>
+
+
+                <!-- STEP 2: WHO DO YOU WANT TO MEET -->
+                <section class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">02</span>
+                        <h2>Who would you like to meet?</h2>
+                        <p>Select who you'd be interested in connecting with.</p>
+                    </div>
+
+                    <div class="choice-grid">
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interestedIn" value="women">
+                            <span>Women</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interestedIn" value="men">
+                            <span>Men</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interestedIn" value="non-binary">
+                            <span>Non-binary people</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interestedIn" value="everyone">
+                            <span>Everyone</span>
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- STEP 3: DATING PREFERENCES -->
+                <section class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">03</span>
+                        <h2>What are you looking for?</h2>
+                        <p>Tell us what kind of connection you're interested in.</p>
+                    </div>
+
+                    <div class="choice-grid">
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="lookingFor" value="friendship">
+                            <span>Friendship</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="lookingFor" value="dating">
+                            <span>Dating</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="lookingFor" value="serious-relationship">
+                            <span>Serious Relationship</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="lookingFor" value="casual">
+                            <span>Casual Connection</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="lookingFor" value="not-sure">
+                            <span>Still Figuring It Out</span>
+                        </label>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="minAge">Preferred Age Range</label>
+
+                        <div class="age-range">
+                            <input type="number" id="minAge" name="minAge"
+                                min="18" max="99" value="18">
+
+                            <span>to</span>
+
+                            <input type="number" id="maxAge" name="maxAge"
+                                min="18" max="99" value="30">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="locationPreference">Preferred Location</label>
+
+                        <select id="locationPreference" name="locationPreference">
+                            <option value="same-city">Same City</option>
+                            <option value="nearby">Nearby Cities</option>
+                            <option value="anywhere">Anywhere</option>
+                        </select>
+                    </div>
+
+                </section>
+
+
+                <!-- STEP 4: INTERESTS -->
+                <section class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">04</span>
+                        <h2>What are you into?</h2>
+                        <p>Choose things you enjoy. Select as many as you like.</p>
+                    </div>
+
+                    <div class="choice-grid interests-grid">
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="music">
+                            <span>Music</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="movies">
+                            <span>Movies</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="web-series">
+                            <span>Web Series</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="anime">
+                            <span>Anime</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="cricket">
+                            <span>Cricket</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="football">
+                            <span>Football</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="gym">
+                            <span>Gym & Fitness</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="travelling">
+                            <span>Travelling</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="food">
+                            <span>Food & Cooking</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="photography">
+                            <span>Photography</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="reading">
+                            <span>Reading</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="gaming">
+                            <span>Gaming</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="coding">
+                            <span>Coding & Technology</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="checkbox" name="interests" value="art">
+                            <span>Art & Creativity</span>
+                        </label>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="otherInterests">Anything else?</label>
+                        <input type="text" id="otherInterests" name="otherInterests"
+                            placeholder="Tell us about other interests">
+                    </div>
+
+                </section>
+
+
+                <!-- STEP 5: ABOUT YOURSELF -->
+                <section class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">05</span>
+                        <h2>Tell us about yourself.</h2>
+                        <p>Give people a little idea of who you are.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">About Me</label>
+                        <textarea id="bio" name="bio" maxlength="300"
+                            placeholder="Write something about yourself..."></textarea>
+                        <small>Maximum 300 characters.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education">Education</label>
+                        <input type="text" id="education" name="education"
+                            placeholder="Your education">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="college">College / University</label>
+                        <input type="text" id="college" name="college"
+                            placeholder="Your college or university">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" name="occupation"
+                            placeholder="What do you do?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="languages">Languages</label>
+                        <input type="text" id="languages" name="languages"
+                            placeholder="Example: English, Hindi">
+                    </div>
+
+                </section>
+
+
+                <!-- STEP 6: PROFILE PHOTOS -->
+                <section class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">06</span>
+                        <h2>Put a face to your profile.</h2>
+                        <p>Add photos so people can recognise you.</p>
+                    </div>
+
+                    <div class="form-group">
+    <label for="profilePhoto">Main Profile Photo</label>
+
+    <input
+        type="file"
+        id="profilePhoto"
+        name="profilePhoto"
+        accept="image/*"
+        required
+    >
+
+    <div id="mainPhotoPreview" class="photo-preview"></div>
+</div>
+
+<div class="form-group">
+    <label for="additionalPhotos">Additional Photos</label>
+
+    <input
+        type="file"
+        id="additionalPhotos"
+        name="additionalPhotos"
+        accept="image/*"
+        multiple
+    >
+
+    <div id="additionalPhotosPreview" class="photo-preview"></div>
+</div>
+                </section>
+
+
+                <!-- STEP 7: REVIEW -->
+                <section class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">07</span>
+                        <h2>One last look.</h2>
+                        <p>Review your profile before submitting.</p>
+                    </div>
+
+                    <div id="profileReview">
+                        Your profile summary will appear here.
+                    </div>
+
+                </section>
+
+
+                <!-- NAVIGATION -->
+                <div class="form-navigation">
+
+                    <button type="button" id="prevBtn" disabled>
+                        Back
+                    </button>
+
+                    <button type="button" id="nextBtn">
+                        Continue
+                    </button>
+
+                    <button type="submit" id="submitBtn" hidden>
+                        Create Profile
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="js/profile.js"></script>
+
+</body>
+</html>

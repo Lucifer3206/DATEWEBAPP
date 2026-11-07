@@ -1,0 +1,22 @@
+/* Profile Privacy Section */
+
+.form-section:nth-of-type(8) select {
+    min-height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-section:nth-of-type(8) input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #000;
+}
+
+.form-section:nth-of-type(8) label {
+    cursor: pointer;
+}
+
+.form-section:nth-of-type(8) .form-group {
+    margin-bottom: 22px;
+}

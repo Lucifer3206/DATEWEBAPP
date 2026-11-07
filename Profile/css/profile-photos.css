@@ -1,0 +1,14 @@
+/* Profile Photos Section */
+
+.form-section:nth-of-type(6) input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-section:nth-of-type(6) .form-group {
+    margin-bottom: 22px;
+}

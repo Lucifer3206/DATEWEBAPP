@@ -1,0 +1,11 @@
+/* Lifestyle Section */
+
+.form-section:nth-of-type(4) select {
+    min-height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-section:nth-of-type(4) .form-group {
+    margin-bottom: 22px;
+}
