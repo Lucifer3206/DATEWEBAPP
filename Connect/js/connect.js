@@ -67,12 +67,27 @@ document.querySelectorAll(".joined-community-card").forEach((item) => {
 });
 
 card.classList.add("is-selected");
+// OPEN FULL-SCREEN CHAT ON MOBILE
+const connectWorkspace = document.querySelector(".connect-workspace");
+
+if (connectWorkspace && window.matchMedia("(max-width: 760px)").matches) {
+    if (!connectWorkspace.classList.contains("mobile-chat-open")) {
+        window.history.pushState(
+            { mobileChatOpen: true },
+            ""
+        );
+    }
+
+    connectWorkspace.classList.add("mobile-chat-open");
+}
 
     const chatPanel = document.querySelector(".chat-panel");
 
     if (!chatPanel) return;
 
-    chatPanel.innerHTML = "";
+   chatPanel.querySelectorAll(":scope > :not(#mobile-chat-back)").forEach((element) => {
+    element.remove();
+});
 
     const header = document.createElement("div");
     header.className = "community-chat-header";
@@ -201,4 +216,24 @@ connectNavItems.forEach((item) => {
             targetSection.classList.add("active");
         }
     });
+});
+// MOBILE CHAT BACK BUTTON
+const mobileChatBack = document.getElementById("mobile-chat-back");
+
+if (mobileChatBack) {
+    mobileChatBack.addEventListener("click", () => {
+        const connectWorkspace = document.querySelector(".connect-workspace");
+
+        if (connectWorkspace) {
+            connectWorkspace.classList.remove("mobile-chat-open");
+        }
+    });
+}
+// HANDLE MOBILE BROWSER BACK NAVIGATION
+window.addEventListener("popstate", () => {
+    const connectWorkspace = document.querySelector(".connect-workspace");
+
+    if (connectWorkspace) {
+        connectWorkspace.classList.remove("mobile-chat-open");
+    }
 });

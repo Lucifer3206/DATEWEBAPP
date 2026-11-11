@@ -166,3 +166,45 @@
         font-size: 10px;
     }
 }
+/* MOBILE CHAT NAVIGATION */
+.mobile-chat-back {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .mobile-chat-back {
+        display: block;
+        width: fit-content;
+        margin: 12px 15px;
+        padding: 9px 13px;
+        background: #f2f2f2;
+        color: #222;
+        border: 1px solid #e5e5e5;
+        border-radius: 7px;
+        font-family: inherit;
+        font-size: 12px;
+        cursor: pointer;
+    }
+}
+/* MOBILE SCREEN SWITCHING */
+@media (max-width: 760px) {
+
+    /* Initially show conversation list, hide chat */
+    .chat-panel {
+        display: none;
+    }
+
+    /* When a community is opened, hide list and sidebar */
+    .connect-workspace.mobile-chat-open .connect-sidebar,
+    .connect-workspace.mobile-chat-open .conversation-panel {
+        display: none;
+    }
+
+    /* Show full-screen chat */
+    .connect-workspace.mobile-chat-open .chat-panel {
+        display: flex;
+        width: 100%;
+        height: calc(100vh - 62px - 105px);
+        min-height: 420px;
+    }
+}
