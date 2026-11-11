@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* ==============================
+   GLOBAL RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black: #111111;
+    --color-white: #ffffff;
+    --color-background: #f5f5f5;
+    --color-surface: #ffffff;
+    --color-border: #e5e5e5;
+    --color-text: #222222;
+    --color-muted: #777777;
+
+    --page-padding: 32px;
+    --section-gap: 24px;
+}
+
+
+/* ==============================
+   PAGE BASE
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;   
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   BUTTONS AND INPUTS
+================================= */
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 3px;
+}
+
+
+/* ==============================
+   MAIN DASHBOARD LAYOUT
+================================= */
+
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr) 280px;
+    gap: var(--section-gap);
+
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    padding: var(--page-padding);
+    padding-bottom: 120px;
+}
+
+
+/* ==============================
+   COMMON SECTION STYLING
+================================= */
+
+.dashboard-layout h2,
+.dashboard-layout h3 {
+    color: var(--color-black);
+}
+
+.dashboard-layout section {
+    min-width: 0;
+}
+
+
+/* ==============================
+   RESPONSIVE FOUNDATION
+================================= */
+
+@media (max-width: 1000px) {
+    .dashboard-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    :root {
+        --page-padding: 16px;
+    }
+
+    .dashboard-layout {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 110px;
+    }
+}
+/* =================================
+   DASHBOARD VISUAL REFINEMENT
+================================= */
+
+body {
+    background: #f7f7f8;
+    color: #171717;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Better content spacing */
+
+.dashboard-layout {
+    max-width: 1500px;
+    padding: 32px;
+    gap: 26px;
+}
+
+/* Consistent card appearance */
+
+.left-sidebar,
+.right-sidebar section,
+.community-highlights,
+.recent-conversations,
+.trending-discussions,
+.suggested-discussions {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
+}
+
+/* Better section spacing */
+
+.home-feed {
+    gap: 22px;
+}
+
+/* Cleaner headings */
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: -0.3px;
+}
+
+/* Better text selection */
+
+::selection {
+    background: #222222;
+    color: #ffffff;
+}
+/* SPACE FOR FLOATING BOTTOM DOCK */
+
+body {
+    padding-bottom: 120px;
+}
+/* Prevent fixed Dock from covering page content */
+.dashboard-layout {
+    padding-bottom: 160px;
+}

@@ -1,0 +1,38 @@
+/* TOP HEADER */
+.connect-topbar {
+    height: 70px;
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.connect-logo {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.connect-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.home-link:hover {
+    background: #171717;
+    color: #fff;
+}

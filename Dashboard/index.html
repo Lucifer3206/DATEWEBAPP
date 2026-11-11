@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | DATEWEBAPP</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard-global.css">
+    <link rel="stylesheet" href="css/dashboard-header.css">
+    <link rel="stylesheet" href="css/dashboard-sidebar.css">
+    <link rel="stylesheet" href="css/dashboard-home.css">
+    <link rel="stylesheet" href="css/dashboard-dock.css">
+    <link rel="stylesheet" href="css/dashboard-responsive.css">
+</head>
+
+<body>
+
+    <!-- Top Header -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <h2>DATEWEBAPP</h2>
+        </div>
+
+        <div class="header-search">
+            <input
+                type="search"
+                placeholder="Search people, communities, discussions..."
+                aria-label="Search"
+            >
+        </div>
+
+        <div class="header-right">
+            <button class="notification-btn" aria-label="Notifications">
+                ♧
+            </button>
+
+            <button class="header-profile-btn">
+                Profile
+            </button>
+        </div>
+    </header>
+
+
+    <!-- Main Dashboard Layout -->
+    <main class="dashboard-layout">
+
+       <!-- Left Sidebar -->
+<aside class="left-sidebar">
+
+    <div class="sidebar-section-heading">
+        <h3>My Communities</h3>
+        <span>3</span>
+    </div>
+
+    <div class="my-communities-list">
+
+        <article class="my-community-item active">
+            <div class="my-community-icon">IN</div>
+            <div class="my-community-info">
+                <h4>Indore Community</h4>
+                <p>12 new messages</p>
+            </div>
+        </article>
+
+        <article class="my-community-item">
+            <div class="my-community-icon">GM</div>
+            <div class="my-community-info">
+                <h4>Gaming Zone</h4>
+                <p>3 new messages</p>
+            </div>
+        </article>
+
+        <article class="my-community-item">
+            <div class="my-community-icon">MU</div>
+            <div class="my-community-info">
+                <h4>Music Lovers</h4>
+                <p>Recently active</p>
+            </div>
+        </article>
+
+    </div>
+
+    <button class="view-all-btn">View All Communities</button>
+
+</aside>
+
+
+        <!-- Center Home Feed -->
+        <section class="home-feed">
+
+            <div class="welcome-section">
+                <h1>Welcome Back</h1>
+                <p>Your communities. Your conversations. Your space.</p>
+            </div>
+
+            <section class="community-highlights">
+    <div class="section-heading">
+        <h2>Your Communities</h2>
+        <button class="text-btn">View All</button>
+    </div>
+
+    <div class="community-cards">
+
+        <article class="community-card">
+            <div class="community-icon">IN</div>
+            <div class="community-info">
+                <h3>Indore Community</h3>
+                <p>1,240 members</p>
+            </div>
+        </article>
+
+        <article class="community-card">
+            <div class="community-icon">GM</div>
+            <div class="community-info">
+                <h3>Gaming Zone</h3>
+                <p>856 members</p>
+            </div>
+        </article>
+
+        <article class="community-card">
+            <div class="community-icon">MU</div>
+            <div class="community-info">
+                <h3>Music Lovers</h3>
+                <p>642 members</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+            <section class="recent-conversations">
+
+    <div class="section-heading">
+        <h2>Recent Conversations</h2>
+        <button class="text-btn">View All</button>
+    </div>
+
+    <div class="conversation-list">
+
+        <article class="conversation-card">
+            <div class="conversation-avatar">IN</div>
+
+            <div class="conversation-content">
+                <div class="conversation-top">
+                    <h3>Indore Community</h3>
+                    <span>10 min ago</span>
+                </div>
+
+                <p class="conversation-message">
+                    Anyone planning to visit Sarafa tonight?
+                </p>
+
+                <p class="conversation-meta">12 replies · Community discussion</p>
+            </div>
+        </article>
+
+
+        <article class="conversation-card">
+            <div class="conversation-avatar">GM</div>
+
+            <div class="conversation-content">
+                <div class="conversation-top">
+                    <h3>Gaming Zone</h3>
+                    <span>35 min ago</span>
+                </div>
+
+                <p class="conversation-message">
+                    Which game are you currently playing?
+                </p>
+
+                <p class="conversation-meta">8 replies · Community discussion</p>
+            </div>
+        </article>
+
+
+        <article class="conversation-card">
+            <div class="conversation-avatar">MU</div>
+
+            <div class="conversation-content">
+                <div class="conversation-top">
+                    <h3>Music Lovers</h3>
+                    <span>1 hour ago</span>
+                </div>
+
+                <p class="conversation-message">
+                    Share your favourite song of the week.
+                </p>
+
+                <p class="conversation-meta">24 replies · Community discussion</p>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- TRENDING DISCUSSIONS -->
+<section class="trending-discussions">
+
+    <div class="section-heading">
+        <h2>Trending Discussions</h2>
+        <button class="text-btn">Explore All</button>
+    </div>
+
+    <div class="trending-list">
+
+        <article class="trending-card">
+            <div class="trending-category">TECHNOLOGY</div>
+            <h3>Is AI changing the way we work?</h3>
+            <p>People are sharing their experiences and opinions about AI.</p>
+            <div class="trending-meta">
+                <span>Technology Community</span>
+                <span>48 replies</span>
+            </div>
+        </article>
+
+        <article class="trending-card">
+            <div class="trending-category">TRAVEL</div>
+            <h3>Best places for a weekend trip?</h3>
+            <p>Members are discussing their favourite nearby destinations.</p>
+            <div class="trending-meta">
+                <span>Travel Lovers</span>
+                <span>32 replies</span>
+            </div>
+        </article>
+
+        <article class="trending-card">
+            <div class="trending-category">MUSIC</div>
+            <h3>Which artist is on your playlist?</h3>
+            <p>Discover new music through other members' recommendations.</p>
+            <div class="trending-meta">
+                <span>Music Lovers</span>
+                <span>26 replies</span>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- SUGGESTED DISCUSSIONS -->
+<section class="suggested-discussions">
+
+    <div class="section-heading">
+        <h2>Suggested Discussions</h2>
+        <button class="text-btn">View All</button>
+    </div>
+
+    <div class="suggested-list">
+
+        <article class="suggested-card">
+            <h3>What are your plans for this weekend?</h3>
+            <p>Join the conversation and share what you're planning.</p>
+            <div class="suggested-meta">
+                <span>Indore Community</span>
+                <span>18 replies</span>
+            </div>
+        </article>
+
+        <article class="suggested-card">
+            <h3>Recommend a good movie to watch.</h3>
+            <p>Discover movies recommended by other community members.</p>
+            <div class="suggested-meta">
+                <span>Movies Community</span>
+                <span>14 replies</span>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+</section>
+
+
+<!-- Right Sidebar -->
+<aside class="right-sidebar">
+
+    <!-- DISCOVER COMMUNITIES -->
+    <section class="suggested-communities">
+        <div class="sidebar-section-heading">
+            <h3>Discover Communities</h3>
+            <button class="text-btn">See All</button>
+        </div>
+
+        <div class="discover-community-list">
+
+            <article class="discover-community-card">
+                <div class="discover-community-icon">TR</div>
+                <div class="discover-community-info">
+                    <h4>Travel Lovers</h4>
+                    <p>2.4k members</p>
+                </div>
+                <button class="join-btn">Join</button>
+            </article>
+
+            <article class="discover-community-card">
+                <div class="discover-community-icon">PH</div>
+                <div class="discover-community-info">
+                    <h4>Photography</h4>
+                    <p>1.8k members</p>
+                </div>
+                <button class="join-btn">Join</button>
+            </article>
+
+            <article class="discover-community-card">
+                <div class="discover-community-icon">TC</div>
+                <div class="discover-community-info">
+                    <h4>Tech Community</h4>
+                    <p>3.1k members</p>
+                </div>
+                <button class="join-btn">Join</button>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- POPULAR DISCUSSIONS -->
+    <section class="popular-discussions">
+        <div class="sidebar-section-heading">
+            <h3>Popular Discussions</h3>
+        </div>
+
+        <div class="popular-discussion-list">
+
+            <article class="popular-discussion-card">
+                <h4>Best cafes to visit in the city?</h4>
+                <p>Food Lovers · 56 replies</p>
+            </article>
+
+            <article class="popular-discussion-card">
+                <h4>What are you listening to today?</h4>
+                <p>Music Lovers · 42 replies</p>
+            </article>
+
+            <article class="popular-discussion-card">
+                <h4>Which skill are you learning?</h4>
+                <p>Technology · 31 replies</p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- PEOPLE WITH SIMILAR INTERESTS -->
+    <section class="similar-people">
+        <div class="sidebar-section-heading">
+            <h3>People with Similar Interests</h3>
+        </div>
+
+        <div class="similar-people-list">
+
+            <article class="similar-person-card">
+                <div class="person-avatar">A</div>
+                <div class="person-info">
+                    <h4>Alex</h4>
+                    <p>Music · Travel</p>
+                </div>
+                <button class="view-profile-btn">View</button>
+            </article>
+
+            <article class="similar-person-card">
+                <div class="person-avatar">R</div>
+                <div class="person-info">
+                    <h4>Riya</h4>
+                    <p>Movies · Photography</p>
+                </div>
+                <button class="view-profile-btn">View</button>
+            </article>
+
+        </div>
+    </section>
+
+</aside>
+    </main>
+
+
+    <!-- Bottom Dock -->
+   <nav class="dashboard-dock" aria-label="Main navigation">
+    <button class="dock-item active" data-page="home"
+        onclick="window.location.href='index.html'">Home</button>
+
+    <button class="dock-item" data-page="connect"
+    onclick="window.location.href='../Connect/index.html'">Connect</button>
+
+    <button class="dock-item" data-page="explore">Explore</button>
+
+    <button class="dock-item" data-page="interested">Interested</button>
+
+    <button class="dock-item" data-page="profile">Profile</button>
+</nav>
+
+
+    <!-- Dashboard JavaScript -->
+    <script src="js/dashboard.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/dock.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>

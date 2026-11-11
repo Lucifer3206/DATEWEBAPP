@@ -325,5 +325,6 @@ function displayPhotoPreviews(input, previewContainer) {
         previewContainer.dataset.objectUrls = JSON.stringify(validURLs);
     });
 }
+
 displayPhotoPreviews(profilePhotoInput, mainPhotoPreview);
 displayPhotoPreviews(additionalPhotosInput, additionalPhotosPreview);

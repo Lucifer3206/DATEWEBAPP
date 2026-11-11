@@ -1,0 +1,63 @@
+/* TABLET */
+@media (max-width: 1050px) {
+    .connect-workspace {
+        grid-template-columns: 190px 300px minmax(0, 1fr);
+    }
+
+    .connect-topbar {
+        padding: 0 22px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 760px) {
+    .connect-workspace {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .connect-sidebar {
+        padding: 18px;
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .connect-sidebar h2 {
+        margin-bottom: 14px;
+    }
+
+    .connect-navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .connect-nav-item {
+        width: auto;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .conversation-panel {
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+        min-height: 320px;
+    }
+
+    .chat-panel {
+        min-height: 360px;
+    }
+
+    .connect-topbar {
+        height: 62px;
+        padding: 0 16px;
+    }
+
+    .connect-logo {
+        font-size: 16px;
+    }
+
+    .home-link {
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+}

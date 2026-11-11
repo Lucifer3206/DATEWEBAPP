@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | DATEWEBAPP</title>
+    <link rel="stylesheet" href="css/connect.css">
+    <link rel="stylesheet" href="css/connect-global.css">
+<link rel="stylesheet" href="css/connect-header.css">
+<link rel="stylesheet" href="css/connect-sidebar.css">
+<link rel="stylesheet" href="css/connect-conversations.css">
+<link rel="stylesheet" href="css/connect-chat.css">
+<link rel="stylesheet" href="css/connect-responsive.css">
+<link rel="stylesheet" href="../Dashboard/css/dashboard-dock.css">
+</head>
+<body>
+<div class="connect-app">
+
+    <!-- TOP HEADER -->
+    <header class="connect-topbar">
+        <div class="connect-logo">DATEWEBAPP</div>
+
+        <div class="connect-top-actions">
+            <a href="../Dashboard/index.html" class="home-link">
+                Back to Home
+            </a>
+        </div>
+    </header>
+
+
+    <!-- MAIN CONNECT WORKSPACE -->
+    <div class="connect-workspace">
+
+        <!-- LEFT NAVIGATION -->
+        <aside class="connect-sidebar">
+
+            <h2>Connect</h2>
+
+            <nav class="connect-navigation">
+    <button class="connect-nav-item active" data-section="communities">
+        Communities
+    </button>
+
+    <button class="connect-nav-item" data-section="group-chats">
+        Group Chats
+    </button>
+
+    <button class="connect-nav-item" data-section="private-chats">
+        Private Chats
+    </button>
+
+    <button class="connect-nav-item" data-section="requests">
+        Connection Requests
+    </button>
+</nav>
+        </aside>
+
+
+        <!-- MIDDLE CONVERSATION LIST -->
+        <section class="conversation-panel">
+
+            <div class="conversation-panel-header">
+                <h2>Messages</h2>
+                <span>All your conversations</span>
+            </div>
+
+            <div class="conversation-search">
+                <input
+                    type="text"
+                    placeholder="Search conversations..."
+                >
+            </div>
+
+            <!-- COMMUNITIES SECTION -->
+<div class="connect-content-section active" id="communities-section">
+    <div class="conversation-tabs">
+        <button class="active">All</button>
+        <button>Groups</button>
+        <button>Personal</button>
+    </div>
+
+    <div id="joined-community-list">
+        <div class="empty-state">
+            <h3>No conversations yet</h3>
+            <p>Join a community to get started.</p>
+        </div>
+    </div>
+</div>
+
+<!-- GROUP CHATS SECTION -->
+<div class="connect-content-section" id="group-chats-section">
+    <div class="empty-state">
+        <h3>No group chats yet</h3>
+        <p>Your community group conversations will appear here.</p>
+    </div>
+</div>
+
+<!-- PRIVATE CHATS SECTION -->
+<div class="connect-content-section" id="private-chats-section">
+    <div class="empty-state">
+        <h3>No private conversations yet</h3>
+        <p>Your accepted connections will appear here.</p>
+    </div>
+</div>
+
+<!-- CONNECTION REQUESTS SECTION -->
+<div class="connect-content-section" id="requests-section">
+    <div class="empty-state">
+        <h3>No connection requests</h3>
+        <p>New connection requests will appear here.</p>
+    </div>
+</div>
+
+        </section>
+
+
+        <!-- RIGHT CHAT AREA -->
+        <main class="chat-panel">
+
+            <div class="chat-empty-state">
+
+                <div class="chat-empty-icon">✉</div>
+
+                <h2>Your conversations</h2>
+
+                <p>
+                    Select a community or conversation
+                    to start connecting.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+<!-- BOTTOM NAVIGATION DOCK -->
+<nav class="dashboard-dock" aria-label="Main navigation">
+
+    <button class="dock-item"
+        data-page="home"
+        onclick="window.location.href='../Dashboard/index.html'">
+        Home
+    </button>
+
+    <button class="dock-item active"
+        data-page="connect"
+        onclick="window.location.href='index.html'">
+        Connect
+    </button>
+
+    <button class="dock-item" data-page="explore">
+        Explore
+    </button>
+
+    <button class="dock-item" data-page="interested">
+        Interested
+    </button>
+
+    <button class="dock-item"
+        data-page="profile"
+        onclick="window.location.href='../Profile/profile.html'">
+        Profile
+    </button>
+
+</nav>
+<script src="../Dashboard/js/dock.js"></script>
+</body>
+</html>

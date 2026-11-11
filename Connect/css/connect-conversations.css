@@ -1,0 +1,121 @@
+/* MIDDLE CONVERSATION PANEL */
+.conversation-panel {
+    min-width: 0;
+    border-right: 1px solid #eaeaea;
+}
+
+.conversation-panel-header {
+    padding: 27px 22px 15px;
+}
+
+.conversation-panel-header h2 {
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.conversation-panel-header span {
+    color: #999;
+    font-size: 12px;
+}
+
+.conversation-search {
+    padding: 10px 18px;
+}
+
+.conversation-search input {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    outline: none;
+    border-radius: 9px;
+    background: #f3f3f3;
+    font-size: 12px;
+}
+
+.conversation-tabs {
+    display: flex;
+    gap: 20px;
+    padding: 12px 22px;
+    border-bottom: 1px solid #eee;
+}
+
+.conversation-tabs button {
+    border: none;
+    background: transparent;
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.conversation-tabs button.active {
+    color: #111;
+}
+
+/* EMPTY STATE */
+.empty-state {
+    padding: 45px 20px;
+    text-align: center;
+    border: 1px dashed #ddd;
+    border-radius: 12px;
+}
+
+.empty-state h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #999;
+    font-size: 12px;
+}
+
+/* JOINED COMMUNITY CARDS */
+.joined-community-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: background 0.2s ease;
+}
+
+.joined-community-card:hover {
+    background: #fafafa;
+}
+
+.community-details h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.community-details p {
+    color: #888;
+    font-size: 12px;
+}
+
+.open-community-btn {
+    padding: 9px 15px;
+    background: #171717;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.open-community-btn:hover {
+    background: #444;
+}
+/* CONNECT CONTENT SECTIONS */
+
+.connect-content-section {
+    display: none;
+}
+
+.connect-content-section.active {
+    display: block;
+}

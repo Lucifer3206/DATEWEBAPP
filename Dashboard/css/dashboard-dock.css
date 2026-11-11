@@ -1,0 +1,111 @@
+/* ==============================
+   FLOATING DOCK
+================================= */
+
+.dashboard-dock {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: max-content;
+    max-width: calc(100% - 32px);
+
+    margin: 0;
+    padding: 10px 14px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+
+    z-index: 1000;
+}
+/* ==============================
+   DOCK ITEMS
+================================= */
+
+.dock-item {
+    position: relative;
+    z-index: 1;
+
+    min-width: 88px;
+    height: 58px;
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 14px;
+
+    background: transparent;
+    color: #777;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transform-origin: center bottom;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.dock-item:hover {
+    z-index: 10;
+}
+/* ACTIVE ITEM */
+
+.dock-item.active {
+    background: #111;
+    color: #fff;
+}
+
+
+/* HOVER */
+
+@media (hover: hover) {
+    .dock-item:not(.active):hover {
+        background: #eeeeee;
+        color: #111;
+        transform: translateY(-5px) scale(1.08);
+    }
+
+    .dock-item.active:hover {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* ==============================
+   MOBILE DOCK
+================================= */
+
+@media (max-width: 650px) {
+
+    .dashboard-dock {
+        width: calc(100% - 24px);
+       gap: 4px;
+padding: 12px 18px;
+overflow: visible;   }
+
+    .dock-item {
+        flex: 1;
+        min-width: 0;
+        height: 48px;
+        padding: 0 3px;
+        font-size: 10px;
+    }
+}
