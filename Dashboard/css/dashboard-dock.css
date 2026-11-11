@@ -4,58 +4,54 @@
 
 .dashboard-dock {
     position: fixed;
-    bottom: 20px;
+    bottom: 22px;
     left: 50%;
     transform: translateX(-50%);
 
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
+    gap: 8px;
 
-    width: max-content;
-    max-width: calc(100% - 32px);
+    width: min(760px, calc(100% - 32px));
+    padding: 7px  12px;
 
-    margin: 0;
-    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #eeeeee;
+    border-radius: 45px;
 
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid #e5e5e5;
-    border-radius: 20px;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
-
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
     z-index: 1000;
 }
-/* ==============================
-   DOCK ITEMS
-================================= */
+
+/* Individual Dock Items */
 
 .dock-item {
     position: relative;
     z-index: 1;
 
-    min-width: 88px;
-    height: 58px;
-    padding: 0 12px;
+    flex: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 0 14px;
 
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 9px;
 
     border: none;
-    border-radius: 14px;
-
+    border-radius: 32px;
     background: transparent;
-    color: #777;
+    color: #111;
 
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
 
+    white-space: nowrap;
     cursor: pointer;
-
-    transform-origin: center bottom;
 
     transition:
         transform 0.2s ease,
@@ -63,24 +59,40 @@
         color 0.2s ease;
 }
 
-.dock-item:hover {
-    z-index: 10;
+/* Icons */
+
+.dock-item svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
-/* ACTIVE ITEM */
+
+/* Labels */
+
+.dock-item span {
+    white-space: nowrap;
+}
+
+/* Active Item */
 
 .dock-item.active {
+    flex: 1.2;
     background: #111;
     color: #fff;
 }
 
-
-/* HOVER */
+/* Hover Effect */
 
 @media (hover: hover) {
     .dock-item:not(.active):hover {
-        background: #eeeeee;
-        color: #111;
-        transform: translateY(-5px) scale(1.08);
+        background: #f0f0f0;
+        transform: translateY(-4px);
     }
 
     .dock-item.active:hover {
@@ -88,24 +100,25 @@
     }
 }
 
-
-/* ==============================
-   MOBILE DOCK
-================================= */
+/* Mobile */
 
 @media (max-width: 650px) {
-
     .dashboard-dock {
-        width: calc(100% - 24px);
-       gap: 4px;
-padding: 12px 18px;
-overflow: visible;   }
+        width: calc(100% - 20px);
+        gap: 2px;
+        padding: 7px;
+        bottom: 12px;
+    }
 
     .dock-item {
-        flex: 1;
-        min-width: 0;
         height: 48px;
-        padding: 0 3px;
+        padding: 0 5px;
+        gap: 5px;
         font-size: 10px;
+    }
+
+    .dock-item svg {
+        width: 19px;
+        height: 19px;
     }
 }

@@ -381,19 +381,51 @@
 
     <!-- Bottom Dock -->
    <nav class="dashboard-dock" aria-label="Main navigation">
+
     <button class="dock-item active" data-page="home"
-        onclick="window.location.href='index.html'">Home</button>
+        onclick="window.location.href='index.html'">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5v10a.5.5 0 0 1-.5.5h-6v-7h-5v7h-6a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        <span>Home</span>
+    </button>
 
     <button class="dock-item" data-page="connect"
-    onclick="window.location.href='../Connect/index.html'">Connect</button>
+        onclick="window.location.href='../Connect/index.html'">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="9" cy="8" r="3"/>
+            <circle cx="17" cy="9" r="2.5"/>
+            <path d="M2.5 20v-1.5a6.5 6.5 0 0 1 13 0V20z"/>
+            <path d="M15 14a5 5 0 0 1 6.5 4.8V20h-4"/>
+        </svg>
+        <span>Connect</span>
+    </button>
 
-    <button class="dock-item" data-page="explore">Explore</button>
+    <button class="dock-item" data-page="explore">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"/>
+        </svg>
+        <span>Explore</span>
+    </button>
 
-    <button class="dock-item" data-page="interested">Interested</button>
+    <button class="dock-item" data-page="interested">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s-9-5.5-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-9 12-9 12z"/>
+        </svg>
+        <span>Interested</span>
+    </button>
 
-    <button class="dock-item" data-page="profile">Profile</button>
+    <button class="dock-item" data-page="profile"
+        onclick="window.location.href='../Profile/profile.html'">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M4 21v-2a8 8 0 0 1 16 0v2z"/>
+        </svg>
+        <span>Profile</span>
+    </button>
+
 </nav>
-
 
     <!-- Dashboard JavaScript -->
     <script src="js/dashboard.js"></script>
