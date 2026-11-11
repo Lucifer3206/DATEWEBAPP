@@ -1,38 +1,186 @@
-/* TOP HEADER */
+/* ==============================
+   CONNECT TOP HEADER
+================================= */
+
 .connect-topbar {
-    height: 70px;
+    height: 72px;
     padding: 0 35px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 35px;
+
     background: #fff;
     border-bottom: 1px solid #eaeaea;
 }
 
+/* LOGO */
+
 .connect-logo {
-    font-size: 19px;
+    flex-shrink: 0;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: 21px;
     font-weight: 800;
-    letter-spacing: -0.7px;
+    letter-spacing: -0.8px;
 }
+
+/* GLOBAL SEARCH */
+
+.connect-global-search {
+    width: 100%;
+    max-width: 580px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 16px;
+
+    background: #f6f6f6;
+    border: 1px solid #ededed;
+    border-radius: 25px;
+}
+
+.connect-global-search svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: #777;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+}
+
+.connect-global-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #222;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.connect-global-search input::placeholder {
+    color: #999;
+}
+
+/* RIGHT ACTIONS */
 
 .connect-top-actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 22px;
+    flex-shrink: 0;
 }
 
-.home-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 9px 15px;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    transition: background 0.2s ease, color 0.2s ease;
+/* NOTIFICATION BUTTON */
+
+.connect-notification-btn {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
 }
 
-.home-link:hover {
-    background: #171717;
+.connect-notification-btn:hover {
+    background: #f3f3f3;
+}
+
+.connect-notification-btn svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+    stroke: #222;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+
+    width: 8px;
+    height: 8px;
+
+    background: #111;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+/* PROFILE SHORTCUT */
+
+.connect-profile-shortcut {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #222;
     color: #fff;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* RESPONSIVE HEADER */
+
+@media (max-width: 650px) {
+    .connect-topbar {
+        height: 65px;
+        padding: 0 15px;
+        gap: 12px;
+    }
+
+    .connect-logo {
+        font-size: 17px;
+    }
+
+    .connect-global-search {
+        max-width: none;
+        height: 38px;
+        padding: 0 10px;
+    }
+
+    .connect-global-search input {
+        font-size: 11px;
+    }
+
+    .connect-top-actions {
+        gap: 5px;
+    }
+
+    .connect-notification-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .connect-profile-shortcut {
+        width: 34px;
+        height: 34px;
+    }
 }

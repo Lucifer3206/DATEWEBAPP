@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect | DATEWEBAPP</title>
-    <link rel="stylesheet" href="css/connect.css">
     <link rel="stylesheet" href="css/connect-global.css">
 <link rel="stylesheet" href="css/connect-header.css">
 <link rel="stylesheet" href="css/connect-sidebar.css">
@@ -17,15 +16,42 @@
 <div class="connect-app">
 
     <!-- TOP HEADER -->
-    <header class="connect-topbar">
-        <div class="connect-logo">DATEWEBAPP</div>
+<header class="connect-topbar">
 
-        <div class="connect-top-actions">
-            <a href="../Dashboard/index.html" class="home-link">
-                Back to Home
-            </a>
-        </div>
-    </header>
+    <a href="../Dashboard/index.html" class="connect-logo">
+        DATEWEBAPP
+    </a>
+
+    <div class="connect-global-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m16 16 5 5"></path>
+        </svg>
+
+        <input
+            type="search"
+            placeholder="Search people, communities and conversations..."
+            aria-label="Search DATEWEBAPP"
+        >
+    </div>
+
+    <div class="connect-top-actions">
+
+        <button class="connect-notification-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                <path d="M10 21h4"></path>
+            </svg>
+            <span class="notification-dot"></span>
+        </button>
+
+        <a href="../Profile/profile.html" class="connect-profile-shortcut">
+            <span>S</span>
+        </a>
+
+    </div>
+
+</header>
 
 
     <!-- MAIN CONNECT WORKSPACE -->
@@ -64,20 +90,9 @@
                 <span>All your conversations</span>
             </div>
 
-            <div class="conversation-search">
-                <input
-                    type="text"
-                    placeholder="Search conversations..."
-                >
-            </div>
 
             <!-- COMMUNITIES SECTION -->
 <div class="connect-content-section active" id="communities-section">
-    <div class="conversation-tabs">
-        <button class="active">All</button>
-        <button>Groups</button>
-        <button>Personal</button>
-    </div>
 
     <div id="joined-community-list">
         <div class="empty-state">
@@ -141,30 +156,51 @@
     <button class="dock-item"
         data-page="home"
         onclick="window.location.href='../Dashboard/index.html'">
-        Home
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5v10a.5.5 0 0 1-.5.5h-6v-7h-5v7h-6a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        <span>Home</span>
     </button>
 
     <button class="dock-item active"
         data-page="connect"
         onclick="window.location.href='index.html'">
-        Connect
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="9" cy="8" r="3"/>
+            <circle cx="17" cy="9" r="2.5"/>
+            <path d="M2.5 20v-1.5a6.5 6.5 0 0 1 13 0V20z"/>
+            <path d="M15 14a5 5 0 0 1 6.5 4.8V20h-4"/>
+        </svg>
+        <span>Connect</span>
     </button>
 
     <button class="dock-item" data-page="explore">
-        Explore
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"/>
+        </svg>
+        <span>Explore</span>
     </button>
 
     <button class="dock-item" data-page="interested">
-        Interested
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s-9-5.5-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-9 12-9 12z"/>
+        </svg>
+        <span>Interested</span>
     </button>
 
     <button class="dock-item"
         data-page="profile"
         onclick="window.location.href='../Profile/profile.html'">
-        Profile
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M4 21v-2a8 8 0 0 1 16 0v2z"/>
+        </svg>
+        <span>Profile</span>
     </button>
 
 </nav>
+<script src="js/connect.js"></script>
 <script src="../Dashboard/js/dock.js"></script>
 </body>
 </html>

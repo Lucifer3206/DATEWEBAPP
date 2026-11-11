@@ -1,42 +1,95 @@
-/* LEFT SIDEBAR */
+/* ==============================
+   LEFT CONNECT SIDEBAR
+================================= */
+
 .connect-sidebar {
-    padding: 30px 18px;
+    width: 235px;
+    min-width: 235px;
+    padding: 28px 18px;
+
+    background: #fff;
     border-right: 1px solid #eaeaea;
+    box-sizing: border-box;
 }
 
+/* SIDEBAR TITLE */
+
 .connect-sidebar h2 {
-    font-size: 23px;
-    margin-bottom: 30px;
-    padding-left: 10px;
+    margin: 0 0 28px;
+    padding-left: 12px;
+
+    color: #171717;
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
 }
+
+/* NAVIGATION */
 
 .connect-navigation {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 8px;
 }
+
+/* NAVIGATION BUTTONS */
 
 .connect-nav-item {
     width: 100%;
-    padding: 13px 12px;
+    min-height: 46px;
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+
     text-align: left;
     border: none;
     border-radius: 9px;
+
     background: transparent;
-    color: #666;
+    color: #777;
+
+    font-family: inherit;
     font-size: 13px;
     font-weight: 500;
+
     cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
+
+/* HOVER */
 
 .connect-nav-item:hover {
     background: #f5f5f5;
     color: #111;
 }
 
+/* ACTIVE */
+
 .connect-nav-item.active {
     background: #ededed;
     color: #111;
     font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .connect-sidebar {
+        width: 190px;
+        min-width: 190px;
+        padding: 24px 12px;
+    }
+
+    .connect-sidebar h2 {
+        font-size: 20px;
+    }
+
+    .connect-nav-item {
+        padding: 0 10px;
+        font-size: 12px;
+    }
 }

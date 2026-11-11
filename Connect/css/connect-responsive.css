@@ -1,63 +1,168 @@
 /* TABLET */
+
 @media (max-width: 1050px) {
     .connect-workspace {
-        grid-template-columns: 190px 300px minmax(0, 1fr);
+        grid-template-columns: 190px 290px minmax(0, 1fr);
+    }
+
+    .connect-sidebar {
+        width: 190px;
+        min-width: 190px;
     }
 
     .connect-topbar {
         padding: 0 22px;
+        gap: 20px;
     }
 }
 
 /* MOBILE */
+
 @media (max-width: 760px) {
-    .connect-workspace {
-        grid-template-columns: 1fr;
-        min-height: auto;
+    .connect-app {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 105px;
     }
 
+    .connect-workspace {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: calc(100vh - 62px - 105px);
+        overflow: visible;
+    }
+
+    /* CONNECT SIDEBAR */
+
     .connect-sidebar {
-        padding: 18px;
+        width: 100%;
+        min-width: 0;
+        padding: 18px 15px;
         border-right: none;
         border-bottom: 1px solid #eaeaea;
     }
 
     .connect-sidebar h2 {
         margin-bottom: 14px;
+        padding-left: 5px;
+        font-size: 19px;
     }
 
     .connect-navigation {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 7px;
     }
 
     .connect-nav-item {
         width: auto;
-        flex: 1 1 auto;
+        min-height: 40px;
+        flex: 1 1 calc(50% - 7px);
+        justify-content: center;
+        padding: 0 8px;
         text-align: center;
+        font-size: 11px;
     }
+
+    /* CONVERSATION LIST */
 
     .conversation-panel {
+        width: 100%;
+        min-height: 320px;
         border-right: none;
         border-bottom: 1px solid #eaeaea;
-        min-height: 320px;
+        overflow: visible;
     }
 
-    .chat-panel {
-        min-height: 360px;
+    .conversation-panel-header {
+        padding: 19px 16px 14px;
     }
+
+    .connect-content-section.active {
+        max-height: 360px;
+        overflow-y: auto;
+    }
+
+    /* CHAT PANEL */
+
+    .chat-panel {
+        width: 100%;
+        min-height: 420px;
+        overflow: hidden;
+    }
+
+    .community-chat-header {
+        padding: 16px;
+    }
+
+    .community-chat-body {
+        min-height: 250px;
+        padding: 16px;
+    }
+
+    .community-chat-composer {
+        padding: 12px;
+    }
+
+    .community-chat-composer input {
+        font-size: 12px;
+    }
+
+    .community-chat-composer button {
+        min-width: 65px;
+        padding: 0 12px;
+    }
+
+    /* TOP HEADER */
 
     .connect-topbar {
         height: 62px;
-        padding: 0 16px;
+        padding: 0 14px;
+        gap: 10px;
     }
 
     .connect-logo {
         font-size: 16px;
     }
 
-    .home-link {
-        padding: 8px 11px;
-        font-size: 12px;
+    .connect-top-actions {
+        gap: 4px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+    .connect-global-search {
+        padding: 0 9px;
+    }
+
+    .connect-global-search input {
+        font-size: 10px;
+    }
+
+    .connect-logo {
+        font-size: 14px;
+    }
+
+    .connect-nav-item {
+        font-size: 10px;
+    }
+
+    .joined-community-card {
+        gap: 8px;
+        padding: 11px 8px;
+    }
+
+    .community-avatar {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+    .open-community-btn {
+        padding: 7px 8px;
+        font-size: 10px;
     }
 }
