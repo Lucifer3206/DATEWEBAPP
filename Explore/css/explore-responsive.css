@@ -1,0 +1,133 @@
+/* TABLET */
+@media (max-width: 900px) {
+    .explore-main {
+        padding: 25px 20px;
+    }
+
+    .profile-discovery {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .profile-gallery,
+    .profile-gallery.is-portrait,
+    .profile-gallery.is-landscape {
+        width: 100%;
+        max-width: 100%;
+        height: 380px;
+        margin: 0 auto;
+    }
+
+    .profile-details-section {
+        padding: 15px 5px;
+    }
+
+    .profile-actions {
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .profile-actions button {
+        flex: 1;
+        min-width: 0;
+        height: 46px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .explore-main {
+        padding: 20px 12px;
+    }
+
+    .explore-intro {
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .explore-intro h1 {
+        font-size: 23px;
+    }
+
+    .explore-intro p {
+        font-size: 12px;
+    }
+
+    .explore-search-area {
+        width: 100%;
+        gap: 7px;
+    }
+
+    .explore-search-area .explore-filter-btn {
+        min-height: 38px;
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .profile-discovery {
+        padding: 12px;
+        gap: 15px;
+        border-radius: 14px;
+    }
+
+    .profile-gallery,
+    .profile-gallery.is-portrait,
+    .profile-gallery.is-landscape {
+        height: 360px;
+        max-width: 100%;
+    }
+
+    .profile-details-section {
+        padding: 10px 3px;
+    }
+
+    .profile-basic-info h2 {
+        font-size: 22px;
+    }
+
+    .profile-detail-group {
+        padding: 13px 0;
+    }
+
+    .profile-prompt {
+        padding: 16px;
+    }
+
+    .profile-actions {
+        position: sticky;
+        bottom: 85px;
+        z-index: 5;
+        display: flex;
+        gap: 8px;
+        padding: 12px 0;
+        background: #fff;
+    }
+
+    .profile-actions button {
+        flex: 1;
+        min-width: 0;
+        height: 44px;
+        padding: 0 6px;
+        font-size: 11px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+    .explore-main {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .profile-gallery,
+    .profile-gallery.is-portrait,
+    .profile-gallery.is-landscape {
+        height: 300px;
+    }
+
+    .profile-actions button {
+        font-size: 10px;
+    }
+}

@@ -380,10 +380,10 @@
 
 
     <!-- Bottom Dock -->
-   <nav class="dashboard-dock" aria-label="Main navigation">
+  <nav class="dashboard-dock" aria-label="Main navigation">
 
-    <button class="dock-item active" data-page="home"
-        onclick="window.location.href='index.html'">
+    <button class="dock-item" data-page="home"
+        onclick="window.location.href='../Dashboard/index.html'">
         <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 10.5 12 3l9 7.5v10a.5.5 0 0 1-.5.5h-6v-7h-5v7h-6a.5.5 0 0 1-.5-.5z"/>
         </svg>
@@ -401,7 +401,7 @@
         <span>Connect</span>
     </button>
 
-    <button class="dock-item" data-page="explore">
+    <button class="dock-item active" data-page="explore">
         <svg viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="9"/>
             <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"/>
@@ -426,7 +426,6 @@
     </button>
 
 </nav>
-
     <!-- Dashboard JavaScript -->
     <script src="js/dashboard.js"></script>
     <script src="js/navigation.js"></script>

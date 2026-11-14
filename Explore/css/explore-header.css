@@ -1,0 +1,204 @@
+/* ==============================
+   EXPLORE HEADER
+============================== */
+
+.connect-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    padding: 16px 5%;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* LOGO */
+
+.connect-logo {
+    color: #111;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* SEARCH + PREFERENCES */
+
+.explore-search-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(650px, 55%);
+}
+
+.connect-global-search {
+    flex: 1;
+    min-width: 0;
+}
+
+.connect-global-search input {
+    width: 100%;
+    height: 44px;
+    padding: 0 18px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    background: #f8f8f8;
+    color: #222;
+    font-size: 14px;
+}
+
+.connect-global-search input:focus {
+    border-color: #555;
+    background: #fff;
+}
+
+/* PREFERENCES BUTTON */
+
+.explore-filter-btn {
+    height: 44px;
+    padding: 0 20px;
+    border: 1px solid #222;
+    border-radius: 25px;
+    background: #fff;
+    color: #222;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.explore-filter-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* RIGHT SIDE ACTIONS */
+
+.connect-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.connect-notification-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+.connect-notification-btn svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: #222;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #222;
+}
+
+.connect-profile-shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .connect-topbar {
+        gap: 15px;
+        padding: 14px 20px;
+    }
+
+    .connect-logo {
+        font-size: 18px;
+    }
+
+    .explore-search-area {
+        width: 55%;
+        gap: 8px;
+    }
+
+    .explore-filter-btn {
+        padding: 0 12px;
+        font-size: 12px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .connect-topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 13px 14px;
+    }
+
+    .connect-logo {
+        font-size: 17px;
+    }
+
+    .connect-top-actions {
+        gap: 10px;
+    }
+
+    .explore-search-area {
+        order: 3;
+        width: 100%;
+    }
+
+    .connect-global-search input {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .explore-filter-btn {
+        height: 40px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .connect-topbar {
+        padding: 12px 10px;
+    }
+
+    .connect-logo {
+        font-size: 15px;
+    }
+
+    .connect-top-actions {
+        gap: 7px;
+    }
+}

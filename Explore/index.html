@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore | DATEWEBAPP</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/explore-global.css">
+    <link rel="stylesheet" href="../Connect/css/connect-header.css">
+    <link rel="stylesheet" href="css/explore-profile.css">
+    <link rel="stylesheet" href="css/explore-actions.css">
+    <link rel="stylesheet" href="css/explore-responsive.css">
+    <link rel="stylesheet" href="../Dashboard/css/dashboard-dock.css">
+    <link rel="stylesheet" href="css/explore-header.css">
+</head>
+
+<body>
+
+    <div class="explore-app">
+
+        <!-- HEADER -->
+        <header class="connect-topbar">
+
+            <a href="../LandingPage/index.html" class="connect-logo">
+                DATEWEBAPP
+            </a>
+
+            <div class="explore-search-area">
+
+    <div class="connect-global-search">
+        <input
+    type="text"
+    id="exploreSearchInput"
+    placeholder="Search people..."
+    autocomplete="off"
+>
+    </div>
+
+    <button class="explore-filter-btn" type="button">
+        Preferences
+    </button>
+
+</div>
+            <div class="connect-top-actions">
+
+                <button class="connect-notification-btn" type="button"
+                    aria-label="Notifications">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                        <path d="M10 21h4"></path>
+                    </svg>
+
+                    <span class="notification-dot"></span>
+                </button>
+
+                <a href="../Profile/profile.html" class="connect-profile-shortcut">
+                    S
+                </a>
+
+            </div>
+
+        </header>
+        <!-- PREFERENCES PANEL -->
+<div class="preferences-overlay" id="preferencesOverlay" hidden>
+
+    <div class="preferences-panel">
+
+        <div class="preferences-header">
+            <h2>Explore Preferences</h2>
+
+            <button type="button"
+                class="preferences-close"
+                id="closePreferences">
+                &times;
+            </button>
+        </div>
+
+        <form id="preferencesForm">
+
+            <!-- AGE RANGE -->
+            <div class="preference-group">
+                <label>Age Range</label>
+
+                <div class="age-range-inputs">
+                    <input type="number" id="minAge"
+                        placeholder="Minimum age" min="18">
+
+                    <input type="number" id="maxAge"
+                        placeholder="Maximum age" min="18">
+                </div>
+            </div>
+
+            <!-- CITY -->
+            <div class="preference-group">
+                <label for="filterCity">City</label>
+
+                <input type="text" id="filterCity"
+                    placeholder="Enter city">
+            </div>
+
+            <!-- GENDER -->
+            <div class="preference-group">
+                <label for="filterGender">Gender Preference</label>
+
+                <select id="filterGender">
+                    <option value="">Any</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- DATING GOALS -->
+            <div class="preference-group">
+                <label for="filterGoal">Looking For</label>
+
+                <select id="filterGoal">
+                    <option value="">Any</option>
+                    <option value="Friendship">Friendship</option>
+                    <option value="Dating">Dating</option>
+                    <option value="Relationship">Relationship</option>
+                </select>
+            </div>
+
+            <!-- INTERESTS -->
+            <div class="preference-group">
+                <label for="filterInterests">Interests</label>
+
+                <input type="text" id="filterInterests"
+                    placeholder="e.g. Music, Travel, Movies">
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="preferences-buttons">
+
+                <button type="button" id="resetPreferences">
+                    Reset
+                </button>
+
+                <button type="submit" id="applyPreferences">
+                    Apply Preferences
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+        <!-- MAIN EXPLORE CONTENT -->
+        <main class="explore-main">
+
+
+
+            <!-- PROFILE DISCOVERY -->
+            <section class="profile-discovery">
+
+                <!-- PROFILE IMAGE AREA -->
+                <div class="profile-image-section">
+
+                    <div class="profile-image">
+                        <span>Profile Photo</span>
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE DETAILS -->
+                <div class="profile-details-section">
+
+                    <div class="profile-basic-info">
+
+                        <h2>Profile Name, 22</h2>
+
+                        <p class="profile-location">
+                            Indore, Madhya Pradesh
+                        </p>
+
+                    </div>
+
+
+                    <!-- ABOUT -->
+                    <div class="profile-detail-group">
+
+                        <h3>About Me</h3>
+
+                        <p>
+                            This is where the person's introduction
+                            and personality description will appear.
+                        </p>
+
+                    </div>
+
+
+                    <!-- INTERESTS -->
+                    <div class="profile-detail-group">
+
+                        <h3>Interests & Hobbies</h3>
+
+                        <div class="profile-tags">
+                            <span>Travelling</span>
+                            <span>Photography</span>
+                            <span>Music</span>
+                            <span>Movies</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- DATING GOALS -->
+                    <div class="profile-detail-group">
+
+                        <h3>Dating Goals</h3>
+
+                        <p>
+                            Friendship and meaningful relationships.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOOKING FOR -->
+                    <div class="profile-detail-group">
+
+                        <h3>Looking For</h3>
+
+                        <p>
+                            Someone with similar interests and values.
+                        </p>
+
+                    </div>
+
+
+                    <!-- COMMUNITIES -->
+                    <div class="profile-detail-group">
+
+                        <h3>Communities</h3>
+
+                        <div class="profile-tags">
+                            <span>Travel Lovers</span>
+                            <span>Photography Club</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROFILE ACTIONS -->
+            <section class="profile-actions">
+
+                <button class="skip-btn" type="button">
+                    Skip
+                </button>
+
+                <button class="interested-btn" type="button">
+                    Interested
+                </button>
+
+                <button class="connect-btn" type="button">
+                    Connect
+                </button>
+
+            </section>
+
+        </main>
+
+<!-- BOTTOM NAVIGATION -->
+<nav class="dashboard-dock" aria-label="Main navigation">
+
+    <button class="dock-item" data-page="home"
+        onclick="window.location.href='../Dashboard/index.html'">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5v10a.5.5 0 0 1-.5.5h-6v-7h-5v7h-6a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        <span>Home</span>
+    </button>
+
+    <button class="dock-item" data-page="connect"
+        onclick="window.location.href='../Connect/index.html'">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="9" cy="8" r="3"/>
+            <circle cx="17" cy="9" r="2.5"/>
+            <path d="M2.5 20v-1.5a6.5 6.5 0 0 1 13 0V20z"/>
+            <path d="M15 14a5 5 0 0 1 6.5 4.8V20h-4"/>
+        </svg>
+        <span>Connect</span>
+    </button>
+
+    <button class="dock-item active" data-page="explore">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"/>
+        </svg>
+        <span>Explore</span>
+    </button>
+
+    <button class="dock-item" data-page="interested">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s-9-5.5-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-9 12-9 12z"/>
+        </svg>
+        <span>Interested</span>
+    </button>
+
+    <button class="dock-item" data-page="profile"
+        onclick="window.location.href='../Profile/profile.html'">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M4 21v-2a8 8 0 0 1 16 0v2z"/>
+        </svg>
+        <span>Profile</span>
+    </button>
+
+</nav>
+    </div>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/profile-data.js"></script>
+    <script src="js/profile-actions.js"></script>
+    <script src="js/explore.js"></script>
+    <script src="../Dashboard/js/dock.js"></script>
+
+</body>
+</html>
